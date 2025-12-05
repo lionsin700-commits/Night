@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>計算小工具</title>
 </head>
 <body>
-    <h1>0123456789</h1>
+
+    <h2>計算小工具</h2>
+
+    <label for="inputA">輸入 A：</label>
+    <input type="number" id="inputA"><br><br>
+
+    <label for="inputB">輸入 B：</label>
+    <input type="number" id="inputB"><br><br>
+
+    <button id="btnCalc">計算</button>
+
+    <h3>結果：<span id="result"></span></h3>
+
+    <script>
+        const inputA = document.getElementById("inputA");
+        const inputB = document.getElementById("inputB");
+        const btnCalc = document.getElementById("btnCalc");
+        const result = document.getElementById("result");
+
+        btnCalc.addEventListener("click", function () {
+            const A = Number(inputA.value);
+            const B = Number(inputB.value);
+            const sum = A + B;
+
+            result.textContent = sum;
+        });
+    </script>
+
 </body>
 </html>
